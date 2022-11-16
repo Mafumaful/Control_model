@@ -14,7 +14,8 @@ attack_signal = zeros(3, N);
 if attack == true
 
     for k = 1:N
-        attack_signal(:, k) = [10 * k * dt; 10 * k * dt; 10 * k * dt];
+        % attack_signal(:, k) = [10 * k * dt; 10 * k * dt; 10 * k * dt];
+        attack_signal(:, k) = 0.8.*[rand-0.5; rand-0.5; rand-0.5];
     end
 
 end
