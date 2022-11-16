@@ -3,7 +3,7 @@
 
 % set simulate time
 dt = 0.01;
-t = 0:dt:2;
+t = 0:dt:5;
 N = length(t);
 
 % set the attack mode
@@ -12,10 +12,11 @@ attack = true;
 attack_signal = zeros(3, N);
 
 if attack == true
-
     for k = 1:N
-        % attack_signal(:, k) = [10 * k * dt; 10 * k * dt; 10 * k * dt];
-        attack_signal(:, k) = 0.8.*[rand-0.5; rand-0.5; rand-0.5];
+        if dt * k > 2
+            attack_signal(:, k) = [ (k) * dt; (k) * dt; (k) * dt];
+            % attack_signal(:, k) = 0.8.*[rand-0.5; rand-0.5; rand-0.5];
+        end
     end
 
 end
