@@ -1,4 +1,3 @@
-clc;
 %% param
 tao = 0.1;
 k_p = 0.2;
